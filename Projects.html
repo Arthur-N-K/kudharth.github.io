@@ -1,49 +1,112 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Arthur Kudhlande</title>
     <link rel="stylesheet" href="Website.css" />
 </head>
 <body>
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="https://kudharth.github.io/Projects">Projects </a>
+                <a href="PersonalWebsite.html"><span class="brand-mark"></span>Arthur Kudhlande</a>
             </div>
             <nav>
-                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!" aria-label="Toggle navigation"><span></span></a></div>
                 <ul class="nav-list">
-                    <li>
-                        <a href="https://kudharth.github.io/PersonalWebsite">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/About">About</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Skills">Skills</a>
-                    </li>
+                    <li><a href="PersonalWebsite.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
                 </ul>
             </nav>
         </div>
     </section>
-    <h2>My Projects</h2>
-    <div class="Card2">
-        <img src="https://lh3.googleusercontent.com/proxy/u2BAUgOpRkt-avTRUjtLn3E02dCGFpdbenZPu9YOfulY7_EunogjX2pFACeIweG071DKv5nbXRgpoGjXKIUNiQ9uu8qGaAlLr-lSAzPHHvK_b1Ph2M5H7A" />
-        <p>
-            The following are some of the projects I have worked on:
-            <ul>
-                <li>Database construction</li>
-                <li>IBC</li>
-                <li>Data visualization to answer COVID-19 data questions</li>
-            </ul>
-        </p>
-    </div>
-    
 
+    <header class="hero" style="padding-bottom: 0;">
+        <div class="wrap">
+            <span class="eyebrow">Projects</span>
+            <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 14px;">Selected systems I've built.</h1>
+            <p class="lede" style="margin-top: 16px;">Serverless, event-driven, and built to survive production traffic — not tutorials.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="wrap">
+            <div class="project-grid">
+
+                <article class="project-card" style="--accent: var(--data);">
+                    <span class="p-index">01 · Data Engineering</span>
+                    <h3>Sports Data ETL Pipeline</h3>
+                    <p>
+                        An event-driven ingestion pipeline that reacts to fixture data changes in real time:
+                        DynamoDB Streams feed an EventBridge Pipe, which triggers a Step Functions state
+                        machine that runs Lambda-based ETL into downstream stores.
+                    </p>
+                    <div class="tag-row">
+                        <span class="chip chip-data">DynamoDB</span>
+                        <span class="chip chip-integration">EventBridge</span>
+                        <span class="chip chip-orchestration">Step Functions</span>
+                        <span class="chip chip-compute">Lambda</span>
+                        <span class="chip chip-compute">Python</span>
+                    </div>
+                </article>
+
+                <article class="project-card" style="--accent: var(--orchestration);">
+                    <span class="p-index">02 · Platform</span>
+                    <h3>Multi-Tenant Social Publishing System</h3>
+                    <p>
+                        Lets subscribers connect their own accounts via OAuth and publish to X (Twitter) and
+                        Meta platforms (Facebook Pages, Instagram). Tokens are protected with KMS envelope
+                        encryption, and Instagram's three-step publish flow is orchestrated with Step Functions;
+                        EventBridge handles scheduled token refresh.
+                    </p>
+                    <div class="tag-row">
+                        <span class="chip chip-orchestration">KMS</span>
+                        <span class="chip chip-orchestration">Step Functions</span>
+                        <span class="chip chip-integration">OAuth</span>
+                        <span class="chip chip-integration">EventBridge</span>
+                        <span class="chip chip-compute">Lambda</span>
+                    </div>
+                </article>
+
+                <article class="project-card" style="--accent: var(--compute);">
+                    <span class="p-index">03 · Migration</span>
+                    <h3>DynamoDB → RDS PostgreSQL Migration Pipeline</h3>
+                    <p>
+                        A Step Functions workflow orchestrating validation and ETL Lambdas to move data from
+                        DynamoDB into RDS PostgreSQL, using psycopg2 with upsert semantics and credentials
+                        pulled securely from Secrets Manager.
+                    </p>
+                    <div class="tag-row">
+                        <span class="chip chip-data">RDS PostgreSQL</span>
+                        <span class="chip chip-orchestration">Step Functions</span>
+                        <span class="chip chip-orchestration">Secrets Manager</span>
+                        <span class="chip chip-compute">Python</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="legacy-note">
+                <span class="eyebrow">Earlier work</span>
+                <p style="margin-top: 10px; color: var(--text-muted);">From earlier coursework: relational database design, an "IBC" data project, and a data-visualization project answering questions about COVID-19 case trends.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Arthur Kudhlande</span>
+            <div class="foot-links">
+                <a href="https://github.com/kudharth" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Nav.js"></script>
 </body>
 </html>
