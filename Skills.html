@@ -1,52 +1,110 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Skills</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skills — Arthur Kudhlande</title>
     <link rel="stylesheet" href="Website.css" />
 </head>
 <body>
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="https://kudharth.github.io/Skills">Skillsets </a>
+                <a href="PersonalWebsite.html"><span class="brand-mark"></span>Arthur Kudhlande</a>
             </div>
             <nav>
-                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!" aria-label="Toggle navigation"><span></span></a></div>
                 <ul class="nav-list">
-                    <li>
-                        <a href="https://kudharth.github.io/PersonalWebsite">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/About">About</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Skills">Skills</a>
-                    </li>
+                    <li><a href="PersonalWebsite.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
                 </ul>
             </nav>
         </div>
     </section>
-    <div class="Card2">
-        <p>
-            The following presents skillsets I have established :
-            <ul>
-                <li>Python</li>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>Tableau</li>
-                <li>MVC</li>
-                <li>HTML</li>
-                <li>PowerBI</li>
-                <li>VBC and Excel</li>
-            </ul>
-            <img src="https://jobsnearme.imgix.net/1bhopsqoA6ICUXgjqc2tlHK9EgiiX0BhOxSd1gT6.jpeg?auto=compress%2Cformat&fit=clip&w=800&s=bc8a65088fc5f62deb5fc1c43dd19379" />
-        </p>
-    </div>
 
+    <header class="hero" style="padding-bottom: 0;">
+        <div class="wrap">
+            <span class="eyebrow">Skills</span>
+            <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 14px;">The stack I build with.</h1>
+            <p class="lede" style="margin-top: 16px;">Organized the way AWS organizes its own console — by what each piece actually does.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="wrap">
+            <div class="skill-grid">
+
+                <div class="skill-card" style="--accent: var(--compute);">
+                    <h3>Compute &amp; Languages</h3>
+                    <div class="tag-row">
+                        <span class="chip chip-compute">Python</span>
+                        <span class="chip chip-compute">AWS Lambda</span>
+                        <span class="chip chip-compute">boto3</span>
+                        <span class="chip chip-compute">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" style="--accent: var(--data);">
+                    <h3>Data &amp; Storage</h3>
+                    <div class="tag-row">
+                        <span class="chip chip-data">DynamoDB</span>
+                        <span class="chip chip-data">RDS PostgreSQL</span>
+                        <span class="chip chip-data">psycopg2</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" style="--accent: var(--integration);">
+                    <h3>Integration &amp; Messaging</h3>
+                    <div class="tag-row">
+                        <span class="chip chip-integration">API Gateway</span>
+                        <span class="chip chip-integration">EventBridge</span>
+                        <span class="chip chip-integration">SQS</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" style="--accent: var(--orchestration);">
+                    <h3>Orchestration &amp; Security</h3>
+                    <div class="tag-row">
+                        <span class="chip chip-orchestration">Step Functions</span>
+                        <span class="chip chip-orchestration">IAM</span>
+                        <span class="chip chip-orchestration">KMS</span>
+                        <span class="chip chip-orchestration">Secrets Manager</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cert-strip" style="margin-top: 40px;">
+                <span class="badge">🛡️ <strong>AWS Certified</strong>&nbsp;Solutions Architect – Associate</span>
+                <span class="badge">⚙️ <strong>AWS Certified</strong>&nbsp;Developer – Associate</span>
+            </div>
+
+            <div class="legacy-note">
+                <span class="eyebrow">Also comfortable with</span>
+                <div class="tag-row">
+                    <span class="chip" style="color: var(--text-muted); background: var(--bg-elevated-2);">C#</span>
+                    <span class="chip" style="color: var(--text-muted); background: var(--bg-elevated-2);">MVC</span>
+                    <span class="chip" style="color: var(--text-muted); background: var(--bg-elevated-2);">Tableau</span>
+                    <span class="chip" style="color: var(--text-muted); background: var(--bg-elevated-2);">Power BI</span>
+                    <span class="chip" style="color: var(--text-muted); background: var(--bg-elevated-2);">VBA / Excel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Arthur Kudhlande</span>
+            <div class="foot-links">
+                <a href="https://github.com/kudharth" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Nav.js"></script>
 </body>
 </html>
