@@ -1,70 +1,99 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Arthur Kudhlande</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arthur Kudhlande — Software Engineer</title>
+    <meta name="description" content="Arthur Kudhlande — AWS software engineer building serverless data pipelines and cloud integrations." />
     <link rel="stylesheet" href="Website.css" />
 </head>
 <body>
-    <!--<h1><span style="color: lightyellow">Arthur Kudhlande's Personal Website</span></h1>
-    <nav>
-        <div class="Card1">
-            <ul class="nav justify-content-center">
-                <li><a target="_blank" href="https://kudharth.github.io/PersonalWebsite">Home</a></li>
-                <li><a target="_blank" href="https://kudharth.github.io/About">About</a></li>
-                <li><a target="_blank" href="https://kudharth.github.io/Projects">Projects</a></li>
-                <li><a target="_blank" href="https://kudharth.github.io/Skills">Skillsets</a></li>
-            </ul>
-        </div>
-    </nav>-->
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="https://kudharth.github.io/PersonalWebsite">Arthur's Personal Website </a>
+                <a href="PersonalWebsite.html"><span class="brand-mark"></span>Arthur Kudhlande</a>
             </div>
             <nav>
-                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!" aria-label="Toggle navigation"><span></span></a></div>
                 <ul class="nav-list">
-                    <li>
-                        <a href="https://kudharth.github.io/PersonalWebsite">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/About">About</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Skills">Skills</a>
-                    </li>
+                    <li><a href="PersonalWebsite.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
                 </ul>
             </nav>
         </div>
     </section>
-    <div class="Card2" style="float:right">
-        <img src="https://cdn.shopify.com/s/files/1/0990/0506/files/arthur-logo-black.png?height=628&pad_color=ffffff&v=1583771175&width=1200‪" />
-        
-    </div>
-    <h2>Introduction</h2>
-    <p>
-        Welcome to my personalized website, where you'll find out all about my skillsets, qualities and
-        accomplishments. Please feel free to explore the entirety of the website at your own accord.
-    </p>
-    <h3>Purpose</h3>
-    <p>
-        The purpose of this website is to reflect in a dynamic and interesting way, all of my qualities as a professional.
-        You'll find all the different projects i have undertaken under the Projects tab. You can also locate the different skills that I
-        also posess and these can be found under the Skillsets tab in my link. The About page will give extra information about me on a more
-        personal level.
-    </p>
-    <div style="float:inherit">
-        <img src="https://cdn.britannica.com/79/147179-050-14CCB8B7/King-Arthur-illustration-NC-title-page-Wyeth.jpg" />
-    </div>
-    
 
+    <header class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <span class="eyebrow">AWS-Certified &middot; Software Engineer</span>
+                <h1>I build cloud pipelines that move <span class="grad">data at scale</span>.</h1>
+                <p class="lede">
+                    Software Engineer at Data Analysis Incorporated, building AWS-native data pipelines
+                    and integrations — serverless ETL, event-driven architectures, and the plumbing that
+                    keeps data moving reliably between systems.
+                </p>
+                <div class="cta-row">
+                    <a class="btn btn-fill" href="Projects.html">View Projects →</a>
+                    <a class="btn btn-outline" href="Skills.html">See Skills</a>
+                </div>
+                <div class="cert-strip">
+                    <span class="badge">🛡️ <strong>AWS Certified</strong>&nbsp;Solutions Architect – Associate</span>
+                    <span class="badge">⚙️ <strong>AWS Certified</strong>&nbsp;Developer – Associate</span>
+                </div>
+                <p class="terminal"><span class="prompt">$</span> whoami <br /><span class="out">arthur@aws — shipping serverless data pipelines since day one</span></p>
+            </div>
 
+            <div class="pipeline-card">
+                <span class="pipeline-label">// a pipeline i actually run in production</span>
+                <svg viewBox="0 0 600 200" role="img" aria-label="Diagram: DynamoDB Streams flows into an EventBridge Pipe, which triggers a Step Functions state machine that invokes Lambda.">
+                    <!-- static connector lines -->
+                    <path d="M 40,60 L 165,60 L 165,140 L 290,140" fill="none" stroke="#322F42" stroke-width="2" />
+                    <path d="M 290,140 L 415,140 L 415,60 L 520,60" fill="none" stroke="#322F42" stroke-width="2" />
 
+                    <!-- animated flow dots -->
+                    <circle class="flow-dot flow-dot-1" r="4.5" fill="#2E8FFF" />
+                    <circle class="flow-dot flow-dot-2" r="4.5" fill="#FF3E9A" />
+                    <circle class="flow-dot flow-dot-3" r="4.5" fill="#2E8FFF" />
 
+                    <!-- Node 1: DynamoDB Streams -->
+                    <rect x="0" y="34" width="150" height="52" rx="10" fill="#1B1926" stroke="#2E8FFF" stroke-opacity="0.45" />
+                    <rect x="0" y="34" width="5" height="52" rx="2" fill="#2E8FFF" />
+                    <text x="16" y="56" class="pipeline-node-label">DynamoDB</text>
+                    <text x="16" y="70" class="pipeline-node-label">Streams</text>
+                    <text x="16" y="82" class="pipeline-node-sub">source</text>
+
+                    <!-- Node 2: EventBridge Pipe -->
+                    <rect x="215" y="114" width="150" height="52" rx="10" fill="#1B1926" stroke="#FF3E9A" stroke-opacity="0.45" />
+                    <rect x="215" y="114" width="5" height="52" rx="2" fill="#FF3E9A" />
+                    <text x="231" y="136" class="pipeline-node-label">EventBridge</text>
+                    <text x="231" y="150" class="pipeline-node-label">Pipe</text>
+                    <text x="231" y="162" class="pipeline-node-sub">route + filter</text>
+
+                    <!-- Node 3: Step Functions -->
+                    <rect x="445" y="34" width="150" height="52" rx="10" fill="#1B1926" stroke="#8B5CF6" stroke-opacity="0.45" />
+                    <rect x="445" y="34" width="5" height="52" rx="2" fill="#8B5CF6" />
+                    <text x="461" y="56" class="pipeline-node-label">Step Functions</text>
+                    <text x="461" y="70" class="pipeline-node-sub">orchestrate</text>
+                    <text x="461" y="82" class="pipeline-node-sub" fill="#FF7A29">→ Lambda</text>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Arthur Kudhlande</span>
+            <div class="foot-links">
+                <a href="https://github.com/kudharth" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Nav.js"></script>
 </body>
 </html>
