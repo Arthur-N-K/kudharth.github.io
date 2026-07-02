@@ -1,44 +1,86 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Arthur Kudhlande</title>
     <link rel="stylesheet" href="Website.css" />
 </head>
 <body>
     <section class="navigation">
         <div class="nav-container">
             <div class="brand">
-                <a href="https://kudharth.github.io/About">About Me </a>
+                <a href="PersonalWebsite.html"><span class="brand-mark"></span>Arthur Kudhlande</a>
             </div>
             <nav>
-                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!" aria-label="Toggle navigation"><span></span></a></div>
                 <ul class="nav-list">
-                    <li>
-                        <a href="https://kudharth.github.io/PersonalWebsite">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/About">About</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="https://kudharth.github.io/Skills">Skills</a>
-                    </li>
+                    <li><a href="PersonalWebsite.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Skills.html">Skills</a></li>
                 </ul>
             </nav>
         </div>
     </section>
-    <div class="Card3">
-        <img src="https://www.themarketingsage.com/wp-content/uploads/2015/08/about-me-leon-severan-we-buy-houses.jpg" />
-        <p>
-            Born in Zimbabwe, and raised in Swaziland, my whole life has been a journey of discovery and new things. Aqcuired a scholarship
-            to go to prestigious colleges in the country. Currenttly getting educated at the University of Oklahoma, I am currently pursuing
-            a degree in MIS. Also planning to attain an accelerated Master's in Information Technology.
-        </p>
-    </div>
 
+    <header class="hero" style="padding-bottom: 0;">
+        <div class="wrap">
+            <span class="eyebrow">About</span>
+            <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 14px;">From Eswatini to the AWS console.</h1>
+        </div>
+    </header>
+
+    <section>
+        <div class="wrap about-photo-row">
+            <div class="about-card">
+                <div class="initials">AK</div>
+                <p class="loc">based in Richardson, TX &middot; open to relocation</p>
+            </div>
+
+            <div>
+                <div class="timeline">
+                    <div class="timeline-item" style="--dot-color: var(--integration); --dot-dim: var(--integration-dim);">
+                        <span class="t-year">Early years</span>
+                        <h3>Zimbabwe → Eswatini</h3>
+                        <p>Born in Zimbabwe and raised in Eswatini (formerly Swaziland) — a childhood spent between two countries that shaped a habit of adapting quickly to new environments.</p>
+                    </div>
+                    <div class="timeline-item" style="--dot-color: var(--orchestration); --dot-dim: var(--orchestration-dim);">
+                        <span class="t-year">Higher education</span>
+                        <h3>University of Oklahoma — MIS</h3>
+                        <p>Earned a scholarship to study in the United States and completed a degree in Management Information Systems, where the interest in how businesses run on software first took hold.</p>
+                    </div>
+                    <div class="timeline-item" style="--dot-color: var(--compute); --dot-dim: var(--compute-dim);">
+                        <span class="t-year">Career</span>
+                        <h3>Associate Software Engineer → Software Engineer, Data Analysis Incorporated</h3>
+                        <p>Started as an Associate Software Engineer and progressed to Software Engineer, building AWS-native data pipelines and integrations — Lambda, Step Functions, EventBridge, DynamoDB, RDS PostgreSQL, and API Gateway.</p>
+                    </div>
+                    <div class="timeline-item" style="--dot-color: var(--data); --dot-dim: var(--data-dim);">
+                        <span class="t-year">Credentials</span>
+                        <h3>AWS Certified — twice over</h3>
+                        <p>Earned both the AWS Certified Solutions Architect – Associate and AWS Certified Developer – Associate certifications, backing up hands-on pipeline work with formal architecture and development depth.</p>
+                    </div>
+                </div>
+
+                <div class="aside-note">
+                    <span class="eyebrow">Outside the console</span>
+                    <p style="margin-top: 10px;">When I'm not debugging a state machine, I'm usually drafting fantasy-thriller fiction or experimenting with audio and podcast-style storytelling formats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Arthur Kudhlande</span>
+            <div class="foot-links">
+                <a href="https://github.com/kudharth" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Nav.js"></script>
 </body>
 </html>
